@@ -30,3 +30,6 @@ set ttyfast
 " set number
 set numberwidth=1
 set relativenumber
+
+so ~/.vim/plugins.vim
+so ~/.vim/plugin-config.vim
