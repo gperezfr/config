@@ -1,2 +1,2 @@
-# config_files
-Configuration files for different tools.
+# config
+Configuration files for vscode, bash and vim.
