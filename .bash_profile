@@ -1,5 +1,5 @@
 alias vi='vim'
-alias ls='ls -Gp'
+alias ls='ls -Gpla'
 
 . ~/git-prompt.sh
 export PS1='Gonzalo:\W$(__git_ps1 " (%s)")\$ '
