@@ -2,25 +2,23 @@ set encoding=utf-8
 
 syntax on
 
-set autoindent
-
 set ruler
-
-set showmode
-
-set tabstop=2
-
-
-set softtabstop=2
-
-set smartindent
-
-set smarttab
-
 set icon
 
+" Show partial command you type in the last line of the screen.
+set showcmd
+
+set autoindent
+set smartindent
+
+" Enable auto completion menu after pressing TAB.
+set wildmenu
+
+"set smarttab
+set tabstop=2
+set softtabstop=2
+
 " highlight search hits
-set hlsearch
 set incsearch
 set linebreak
 
@@ -31,5 +29,13 @@ set ttyfast
 set numberwidth=1
 set relativenumber
 
-so ~/.vim/plugins.vim
-so ~/.vim/plugin-config.vim
+" here because plugins and stuff need it
+if has("syntax")
+  syntax enable
+endif
+
+" Plugins
+if filereadable(expand("~/.vim/autoload/plug.vim"))
+	so ~/.vim/plugins.vim
+	so ~/.vim/plugin-config.vim
+endif
