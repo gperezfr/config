@@ -13,6 +13,8 @@ set smartindent
 
 " Enable auto completion menu after pressing TAB.
 set wildmenu
+" Make wildmenu behave like similar to Bash completion.
+set wildmode=list:longest
 
 "set smarttab
 set tabstop=2
@@ -33,6 +35,9 @@ set relativenumber
 if has("syntax")
   syntax enable
 endif
+
+set noshowmode
+set laststatus=2
 
 " Plugins
 if filereadable(expand("~/.vim/autoload/plug.vim"))
