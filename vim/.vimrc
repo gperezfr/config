@@ -31,6 +31,16 @@ set ttyfast
 set numberwidth=1
 set relativenumber
 
+" disable arrow keys (vi muscle memory)
+noremap <up> :echoerr "Umm, use k instead"<CR>
+noremap <down> :echoerr "Umm, use j instead"<CR>
+noremap <left> :echoerr "Umm, use h instead"<CR>
+noremap <right> :echoerr "Umm, use l instead"<CR>
+inoremap <up> <NOP>
+inoremap <down> <NOP>
+inoremap <left> <NOP>
+inoremap <right> <NOP>
+
 " here because plugins and stuff need it
 if has("syntax")
   syntax enable
